@@ -1,13 +1,13 @@
 {
     "technologies": {
+        "languages": [
+          "javascript"
+        ],
         "apis": [
-            "insert apis"
+            "Google OAuth2 API"
         ],
         "platforms": [
-            "insert platforms"
-        ],
-        "toolkits": [
-            "insert toolkits"
+            "web"
         ]
     },
     "themes": [
