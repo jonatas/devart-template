@@ -1,33 +1,62 @@
-# Project Title
-Insert the name of your project
+# Mandala circular
+
+Making a big mandala digital panel rotate!
 
 ## Authors
-- Insert main author name, surname, github account
-- Insert other author(s) name, surname, github account (one per list element)
+
+- [Jônatas Davi Paganini](http://github.com/jonatas "Feel free to feedback me at jonatasdp@gmail.com")
 
 ## Description
-Insert a description containing about 100 to 150 words, including your motivation and the meaning behind your idea and execution. The Judges will be keen to know how your idea pushes the boundaries of code and technology. 
+
+From little 3 "mandala coloring books" I enjoy the mandala therapy proccess. Now, I want to mixture these handmade colouring art in a rotative panel.
 
 ## Link to Prototype
-NOTE: If your project lives online you can add one or more links here. Make sure you have a stable version of your project running before linking it.
 
-[Example Link](http://www.google.com "Example Link")
+I believe I'll put a small panel demonstrating the prototype soon.
+
+[See here it working!](http://mandala.ideia.me "")
 
 ## Example Code
-NOTE: Wrap your code blocks or any code citation by using ``` like the example below.
+
+The code will be hosted on github [here](https://github.com/jonatas/mandala).
+
+The [example is here](http://jsfiddle.net/kFmY8/1060/ "JSFiddle with the complete code").
+
+The image is unaligned, but covers the concept. The idea is incomplete because I'll crop only the circular part of the image, and combine different directions and speed.
+
+So, with a basic circular image:
+
+
 ```
-function test() {
-  console.log("Printing a test");
+<img class="rotate" src="http://distilleryimage9.ak.instagram.com/9540a5784a5a11e384640eda85d08e73_8.jpg">
+```
+
+And a webkit rotation effect:
+
+```
+.rotate {
+  -webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
 }
 ```
-## Links to External Libraries
- NOTE: You can also use this space to link to external libraries or Github repositories you used on your project.
 
-[Example Link](http://www.google.com "Example Link")
+Now, based on these concepts, my idea is allow the user to combine and create a cool panel of mandalas, rotating in different speeds, sizes, positions in the screen.
+
+## Links to External Libraries
+
+So, for a while I'm not using any special library :)
 
 ## Images & Videos
-NOTE: For additional images you can either use a relative link to an image on this repo or an absolute link to an externally hosted image.
+
+Take a look at [my instagram](http://instagram.com/jonatasdp "See some of my mandalas there!")
+
+TODO: upload the first video rotating the phisical mandalas attached to a drill.
 
 ![Example Image](project_images/cover.jpg?raw=true "Example Image")
 
-https://www.youtube.com/watch?v=30yGOxJJ2PQ
+http://youtu.be/uCbjx_8tQNw
+
