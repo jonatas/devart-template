@@ -48,7 +48,7 @@ Now, based on these concepts, my idea is allow the user to combine and create a 
 
 ## Links to External Libraries
 
-So, for a while I'm not using any special library :)
+* jQuery
 
 ## Images & Videos
 
