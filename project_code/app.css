@@ -11,6 +11,7 @@ h1 {
 }
 
 .rotate {
+  background-color: ()
   width: 33%;
   -webkit-animation: rotation 1s infinite linear;
 }

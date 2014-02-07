@@ -2,20 +2,25 @@
 (function() {
   $(document).ready(function() {
     $("#accelerator").on("change", function() {
-      var changeRotation, image, _i, _len, _ref, _results;
+      var changeRotation, image, _i, _len, _ref;
       $("#turn_on_motor").prop("checked", true);
       _ref = $(".rotate");
-      _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         image = _ref[_i];
         image.style.webkitAnimationPlayState = "paused";
-        changeRotation = function() {
-          image.style.webkitAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
-          return image.style.webkitAnimationPlayState = "running";
-        };
-        _results.push(setTimeout(changeRotation, 200));
       }
-      return _results;
+      changeRotation = function() {
+        var _j, _len1, _ref1, _results;
+        _ref1 = $(".rotate");
+        _results = [];
+        for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+          image = _ref1[_j];
+          image.style.webkitAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
+          _results.push(image.style.webkitAnimationPlayState = "running");
+        }
+        return _results;
+      };
+      return setTimeout(changeRotation, 200);
     });
     return $("#turn_on_motor").on("change", function() {
       var image, state, _i, _len, _ref, _results;
