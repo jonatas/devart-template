@@ -1,14 +1,14 @@
-h1 {
-  text-align: center;
-}
 .tools {
+  position: fixed;
   top: 0;
-  size: 100%;
-  margin-left: 5%;
-  margin-bottom: 100px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 20px;
 }
 #accelerator {
   width: 90%;
+  float: left;
 }
 
 .rotate {
@@ -26,3 +26,4 @@ body { text-align: center; }
   background-color: blue;
   margin: 30px auto;
 }
+
