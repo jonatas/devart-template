@@ -1,8 +1,9 @@
 h1 {
   text-align: center;
 }
-.sidebar {
+.tools {
   top: 0;
+  size: 100%;
   margin-left: 5%;
   margin-bottom: 100px;
 }
@@ -11,7 +12,6 @@ h1 {
 }
 
 .rotate {
-  background-color: ()
   width: 33%;
   -webkit-animation: rotation 1s infinite linear;
 }
