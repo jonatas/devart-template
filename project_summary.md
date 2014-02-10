@@ -5,6 +5,7 @@ Making a big mandala digital panel rotate!
 ## Authors
 
 - [Jônatas Davi Paganini](http://github.com/jonatas "Feel free to feedback me at jonatasdp@gmail.com")
+- [Wellington Mitrut](http://github.com/Wmitrut "Feel free to feedback me at wellingtonmitrut@gmail.com")
 
 ## Description
 
