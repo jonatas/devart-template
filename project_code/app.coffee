@@ -3,11 +3,12 @@ $(document).ready ->
     $("#turn_on_motor").prop("checked",true)
     for image in $(".rotate")
       image.style.webkitAnimationPlayState = "paused"
+    actualAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
     changeRotation = ->
       for image in $(".rotate")
-        image.style.webkitAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
+        image.style.webkitAnimation = actualAnimation
         image.style.webkitAnimationPlayState = "running"
-    setTimeout(changeRotation,200) # it's not refreshing without timeout :(
+    setTimeout(changeRotation,300) # it's not refreshing without timeout :(
 
   $("#turn_on_motor").on "change",  ->
     if @checked

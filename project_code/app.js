@@ -2,25 +2,26 @@
 (function() {
   $(document).ready(function() {
     $("#accelerator").on("change", function() {
-      var changeRotation, image, _i, _len, _ref;
+      var actualAnimation, changeRotation, image, _i, _len, _ref;
       $("#turn_on_motor").prop("checked", true);
       _ref = $(".rotate");
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         image = _ref[_i];
         image.style.webkitAnimationPlayState = "paused";
       }
+      actualAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
       changeRotation = function() {
         var _j, _len1, _ref1, _results;
         _ref1 = $(".rotate");
         _results = [];
         for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
           image = _ref1[_j];
-          image.style.webkitAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
+          image.style.webkitAnimation = actualAnimation;
           _results.push(image.style.webkitAnimationPlayState = "running");
         }
         return _results;
       };
-      return setTimeout(changeRotation, 200);
+      return setTimeout(changeRotation, 300);
     });
     return $("#turn_on_motor").on("change", function() {
       var image, state, _i, _len, _ref, _results;
