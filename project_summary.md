@@ -12,15 +12,13 @@ From little 3 "mandala coloring books" I enjoy the mandala therapy proccess. Now
 
 ## Link to Prototype
 
-I believe I'll put a small panel demonstrating the prototype soon.
-
-[See here it working!](http://mandala.ideia.me "")
+It's hosted on my own subdomain: http://mandala.ideia.me
 
 ## Example Code
 
-The code will be hosted on github [here](https://github.com/jonatas/mandala).
+The code is hosted with the own project at [github](https://github.com/jonatas/devart-template).
 
-The [example is here](http://jsfiddle.net/kFmY8/1060/ "JSFiddle with the complete code").
+The first example can be found [here](http://jsfiddle.net/kFmY8/1060/ "JSFiddle with my first sketch of code").
 
 The image is unaligned, but covers the concept. The idea is incomplete because I'll crop only the circular part of the image, and combine different directions and speed.
 
@@ -44,19 +42,29 @@ And a webkit rotation effect:
 }
 ```
 
+Really cool to see the css keyframes working. Soon, I'll adapt it to work with other modern browsers too.
+
 Now, based on these concepts, my idea is allow the user to combine and create a cool panel of mandalas, rotating in different speeds, sizes, positions in the screen.
 
-## Links to External Libraries
+## External libraries and tools
 
-* jQuery
+I'm really enjoy to use less libraries than I'm using:
+
+### http://jquery.org
+
+I really enjoy jquery and I use it just a little, but it allows me think and acts fast. I use it in the last 3 years :)
+
+### http://coffeescript.org
+
+Simple language easy to use and read. I make it's part of the poetry of the code.
+
+### http://gimp.org
+
+I'm not a confident with the images editor, but I'm doing it with GIMP. It's easy and opensource tool. Help me a lot to crop the mandalas and remove the background.
 
 ## Images & Videos
 
 Take a look at [my instagram](http://instagram.com/jonatasdp "See some of my mandalas there!")
-
-TODO: upload the first video rotating the phisical mandalas attached to a drill.
-
-![Example Image](project_images/cover.jpg?raw=true "Example Image")
 
 http://youtu.be/uCbjx_8tQNw
 
