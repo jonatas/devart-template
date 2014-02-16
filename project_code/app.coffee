@@ -1,6 +1,8 @@
 $(document).ready ->
+  $("#accelerator").css "transform","rotate(90deg)"
   $("#accelerator").on "change",  ->
     $("#turn_on_motor").prop("checked",true)
+    $('#velocimeter').text  $('#accelerator').val()
     for image in $(".rotate")
       image.style.webkitAnimationPlayState = "paused"
     actualAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
