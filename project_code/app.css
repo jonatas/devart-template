@@ -7,18 +7,30 @@
   margin-bottom: 20px;
 }
 #accelerator {
-  width: 90%;
-  float: left;
+  float: right;
+  margin-top: 60px;
 }
-
 .rotate {
-  width: 33%;
-  -webkit-animation: rotation 1s infinite linear;
+  -webkit-animation: scale 1s linear, rotation 1s infinite linear ; 
 }
 @-webkit-keyframes rotation {
   from { -webkit-transform: rotate(0deg)  ; }
   to   { -webkit-transform: rotate(359deg); }
 }
+@-webkit-keyframes scale {
+  0%  { -webkit-transform:rotate(  0deg) scale(1) ; }
+  11% { -webkit-transform:rotate(40deg)  scale(1) ; }
+  22% { -webkit-transform:rotate(80deg)  scale(1.25)   ; }
+  33% { -webkit-transform:rotate(120deg) scale(1.5) ; }
+  44% { -webkit-transform:rotate(160deg) scale(1.75)   ; }
+  55% { -webkit-transform:rotate(200deg) scale(2) ;}
+  66% { -webkit-transform:rotate(240deg) scale(1.75)   ;}
+  77% { -webkit-transform:rotate(280deg) scale(1.5) ; }
+  88% { -webkit-transform:rotate(310deg) scale(1.25)   ; }
+  99% { -webkit-transform:rotate(350deg) scale(1) ; }
+  100% { -webkit-transform:rotate(360deg); }
+}
+
 body { text-align: center; }
 #box {
   height: 100px;
