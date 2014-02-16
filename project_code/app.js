@@ -3,9 +3,10 @@
   $(document).ready(function() {
     $("#accelerator").css("transform", "rotate(90deg)");
     $("#accelerator").on("change", function() {
-      var actualAnimation, changeRotation, image, _i, _len, _ref;
+      var actualAnimation, changeRotation, image, rpm, _i, _len, _ref;
       $("#turn_on_motor").prop("checked", true);
-      $('#velocimeter').text($('#accelerator').val());
+      rpm = parseInt(60 * (1.0 / parseFloat($('#accelerator').val())));
+      $('#velocimeter').text("" + rpm + " rpm");
       _ref = $(".rotate");
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         image = _ref[_i];
@@ -23,7 +24,7 @@
         }
         return _results;
       };
-      return setTimeout(changeRotation, 300);
+      return setTimeout(changeRotation, 500);
     });
     return $("#turn_on_motor").on("change", function() {
       var image, state, _i, _len, _ref, _results;

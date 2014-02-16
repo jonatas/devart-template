@@ -2,7 +2,8 @@ $(document).ready ->
   $("#accelerator").css "transform","rotate(90deg)"
   $("#accelerator").on "change",  ->
     $("#turn_on_motor").prop("checked",true)
-    $('#velocimeter').text  $('#accelerator').val()
+    rpm = parseInt(60 * ( 1.0 / parseFloat( $('#accelerator').val() )))
+    $('#velocimeter').text  "#{rpm} rpm"
     for image in $(".rotate")
       image.style.webkitAnimationPlayState = "paused"
     actualAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
@@ -10,7 +11,7 @@ $(document).ready ->
       for image in $(".rotate")
         image.style.webkitAnimation = actualAnimation
         image.style.webkitAnimationPlayState = "running"
-    setTimeout(changeRotation,300) # it's not refreshing without timeout :(
+    setTimeout(changeRotation,500)
 
   $("#turn_on_motor").on "change",  ->
     if @checked
