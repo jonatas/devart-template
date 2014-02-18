@@ -25,7 +25,6 @@ The image is unaligned, but covers the concept. The idea is incomplete because I
 
 So, with a basic circular image:
 
-
 ```
 <img class="rotate" src="http://distilleryimage9.ak.instagram.com/9540a5784a5a11e384640eda85d08e73_8.jpg">
 ```
