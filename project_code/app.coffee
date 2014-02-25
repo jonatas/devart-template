@@ -27,7 +27,29 @@ $(document).ready ->
 
    startAnimation = ->
      pen.Stop() if pen
-     pen = new Pen("background_animation", 2, 200, 150, 100, '#e0e0e0')
+     pen = new Pen("background_animation", 7.77, 11, 242, 111, 'yellow')
 
-   startAnimation()
+  mandalasToAnimate = mandalas.toArray()
+  mandalas.show()
+    
+  mandala = null
+  animateOneMoreMandala = ->
+    if mandala isnt null
+      mandala.style.webkitAnimationPlayState = "paused"
+      $(mandala).hide()
+    if mandala = mandalasToAnimate.shift()
+      console.log("animating ", mandala)
+      mandala.style.webkitAnimationPlayState = "paused"
+      mandala.webkitAnimation = "scale 8s linear, rotation #{$("#accelerator").val()}s infinite linear"
+      mandala.style.webkitAnimationPlayState = "running"
+    else
+      console.log("terminou ... mandalas" )
+      clearInterval(animatingMandalas) 
+      delete animatingMandalas
+      $(mandalas).show()
+
+  window.animatingMandalas = setInterval(animateOneMoreMandala,8000)
+
+       
+  startAnimation()
 

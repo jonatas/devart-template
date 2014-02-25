@@ -12,24 +12,27 @@
 }
 .mandala {
   height: 100%;
-  -webkit-animation: scale 3s linear, rotation 1s infinite linear ; 
+  -webkit-animation: scale 8s infinite linear, rotation 1s infinite linear; 
+  margin-bottom: 50%;
+
 }
 @-webkit-keyframes rotation {
   from { -webkit-transform: rotate(0deg)  ; }
   to   { -webkit-transform: rotate(359deg); }
 }
 @-webkit-keyframes scale {
-  0%  { -webkit-transform:rotate( 0deg) scale(10) ; }
-  10% { -webkit-transform:rotate(120deg)  scale(8) ; }
-  20% { -webkit-transform:rotate(240deg)  scale(6)   ; }
-  30% { -webkit-transform:rotate(360deg) scale(4) ; }
-  40% { -webkit-transform:rotate(120deg) scale(2)   ; }
-  50% { -webkit-transform:rotate(240deg) scale(1) ;}
-  60% { -webkit-transform:rotate(360deg) scale(0.5)   ;}
-  70% { -webkit-transform:rotate(120deg) scale(0.2) ; }
-  80% { -webkit-transform:rotate(240deg) scale(0.1)   ; }
-  90% { -webkit-transform:rotate(360deg) scale(0.5) ; }
-  100% { -webkit-transform:rotate(360deg) scale(1); }
+  0%  { -webkit-transform:rotate( 0deg) scale(0.0) ; }
+  10% { -webkit-transform:rotate(120deg)  scale(0.3) ; }
+  20% { -webkit-transform:rotate(240deg)  scale(0.6)   ; }
+  30% { -webkit-transform:rotate(360deg) scale(1) ; }
+  31% { -webkit-transform:rotate(480deg) scale(2)   ; }
+  40% { -webkit-transform:rotate(600deg) scale(2)   ; }
+  50% { -webkit-transform:rotate(720deg) scale(3) ;}
+  60% { -webkit-transform:rotate(7400deg) scale(2)   ;}
+  70% { -webkit-transform:rotate(780deg) scale(1) ; }
+  80% { -webkit-transform:rotate(900deg) scale(0.6)   ; }
+  90% { -webkit-transform:rotate(1080deg) scale(0.3) ; }
+  100% { -webkit-transform:rotate(1080deg) scale(0.0); }
 }
 
 body { text-align: center; }
@@ -43,11 +46,14 @@ body { text-align: center; }
   width: 100%;
   height: 100%;
   z-index: -1;
-
 }
 canvas {
-  border: 1px solid black;
-  border-radius:20px;
   width: 100%;
   height: 100%;
+}
+.mandalas-panel{
+  display: block;
+  overflow: visible ;
+  position:fixed;
+  top: 0;
 }

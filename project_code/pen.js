@@ -19,7 +19,7 @@ function Pen(canvasID, radius, posX, posY, speed, color) {
 
             positionAngle = rotate(positionAngle, increment);
             angle = rotate(angle, -increment * 250 / radius);
-            pos = { x: 10, y: 10}
+            pos = { x: 150, y: 72}
             self.center = polar(pos, positionAngle, 250 - radius);
             var point = polar(self.center, angle, distance);
             if (color != undefined) { context.fillStyle = color; } else { context.fillStyle = "black"; }
