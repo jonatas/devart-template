@@ -45,7 +45,7 @@
       if (pen) {
         pen.Stop();
       }
-      return pen = new Pen("background_animation", 7.77, 11, 242, 111, 'yellow');
+      return pen = new Pen("background_animation", 7.77, 7.77, 242, 1000);
     };
     mandalasToAnimate = mandalas.toArray();
     mandalas.show();
@@ -62,9 +62,9 @@
         return mandala.style.webkitAnimationPlayState = "running";
       } else {
         console.log("terminou ... mandalas");
-        clearInterval(animatingMandalas);
+        clearInterval(window.animatingMandalas);
         delete animatingMandalas;
-        return $(mandalas).show();
+        return mandalas.show();
       }
     };
     window.animatingMandalas = setInterval(animateOneMoreMandala, 8000);

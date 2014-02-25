@@ -1,5 +1,5 @@
 ﻿// thank you http://github.com/drvic10k/rotating-mandala
-function Pen(canvasID, radius, posX, posY, speed, color) {
+function Pen(canvasID, radius, posX, posY, speed) {
 
     var self = this;
     var positionAngle = -Math.PI / 2;
@@ -14,23 +14,25 @@ function Pen(canvasID, radius, posX, posY, speed, color) {
     context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
     self.Draw = function () {
+      var colorStep = parseInt(0xFFFFFF / speed);
 
-        for (var i = 0; i < speed; i++) {
-
-            positionAngle = rotate(positionAngle, increment);
-            angle = rotate(angle, -increment * 250 / radius);
-            pos = { x: 150, y: 72}
-            self.center = polar(pos, positionAngle, 250 - radius);
-            var point = polar(self.center, angle, distance);
-            if (color != undefined) { context.fillStyle = color; } else { context.fillStyle = "black"; }
-            if (!stop) {
-                context.fillRect(point.x, point.y, 1, 1);
-            }
-        }
-
+      for (var i = 0; i < speed; i++) {
+        var color = '#' + (i * colorStep).toString(16).slice(-6);
+        positionAngle = rotate(positionAngle, increment);
+        angle = rotate(angle, -increment * 250 / radius);
+        pos = { x: 150, y: 72}
+        self.center = polar(pos, positionAngle, 250 - radius);
+        var point = polar(self.center, angle, distance);
+        context.fillStyle = color;
         if (!stop) {
-            requestAnimationFrame(self.Draw);
+          context.fillRect(point.x, point.y, 0.3, 0.3);
         }
+        colorStep++;
+      }
+
+      if (!stop) {
+        requestAnimationFrame(self.Draw);
+      }
 
 
     };

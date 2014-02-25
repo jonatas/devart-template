@@ -27,7 +27,7 @@ $(document).ready ->
 
    startAnimation = ->
      pen.Stop() if pen
-     pen = new Pen("background_animation", 7.77, 11, 242, 111, 'yellow')
+     pen = new Pen("background_animation", 7.77, 7.77, 242, 1000)
 
   mandalasToAnimate = mandalas.toArray()
   mandalas.show()
@@ -44,9 +44,9 @@ $(document).ready ->
       mandala.style.webkitAnimationPlayState = "running"
     else
       console.log("terminou ... mandalas" )
-      clearInterval(animatingMandalas) 
+      clearInterval(window.animatingMandalas) 
       delete animatingMandalas
-      $(mandalas).show()
+      mandalas.show()
 
   window.animatingMandalas = setInterval(animateOneMoreMandala,8000)
 
