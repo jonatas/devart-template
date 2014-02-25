@@ -5,6 +5,10 @@ Making a big mandala digital panel rotate!
 ## Authors
 
 - [Jônatas Davi Paganini](http://github.com/jonatas "Feel free to feedback me at jonatasdp@gmail.com")
+
+## Collaborators
+
+- [Eliége Jachini](http://github.com/eliegejachini "Feel free to feedback me at eliegejachini@gmail.com")
 - [Wellington Mitrut](http://github.com/Wmitrut "Feel free to feedback me at wellingtonmitrut@gmail.com")
 
 ## Description
@@ -24,7 +28,6 @@ The first example can be found [here](http://jsfiddle.net/kFmY8/1060/ "JSFiddle 
 The image is unaligned, but covers the concept. The idea is incomplete because I'll crop only the circular part of the image, and combine different directions and speed.
 
 So, with a basic circular image:
-
 
 ```
 <img class="rotate" src="http://distilleryimage9.ak.instagram.com/9540a5784a5a11e384640eda85d08e73_8.jpg">
