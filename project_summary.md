@@ -9,7 +9,6 @@ Making a big mandala digital panel rotate!
 ## Collaborators
 
 - [Eliége Jachini](http://github.com/eliegejachini "Feel free to feedback me at eliegejachini@gmail.com")
-- [Wellington Mitrut](http://github.com/Wmitrut "Feel free to feedback me at wellingtonmitrut@gmail.com")
 
 ## Description
 
@@ -72,3 +71,6 @@ Take a look at [my instagram](http://instagram.com/jonatasdp "See some of my man
 
 http://youtu.be/uCbjx_8tQNw
 
+## Hardware session
+
+I'm working with a beaglebone black to work with the real motors and do it like the panel on the web.
