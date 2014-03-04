@@ -4,10 +4,11 @@
           "javascript"
         ],
         "apis": [
-            "Google OAuth2 API"
+            "Google OAuth2 API",
+            "bonescript"
         ],
         "platforms": [
-            "web"
+            "web", "beaglebone black"
         ]
     },
     "themes": [

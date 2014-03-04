@@ -9,7 +9,6 @@ Making a big mandala digital panel rotate!
 ## Collaborators
 
 - [Eliége Jachini](http://github.com/eliegejachini "Feel free to feedback me at eliegejachini@gmail.com")
-- [Wellington Mitrut](http://github.com/Wmitrut "Feel free to feedback me at wellingtonmitrut@gmail.com")
 
 ## Description
 
@@ -66,9 +65,16 @@ Simple language easy to use and read. I make it's part of the poetry of the code
 
 I'm not a confident with the images editor, but I'm doing it with GIMP. It's easy and opensource tool. Help me a lot to crop the mandalas and remove the background.
 
+### [BoneScript](http://beagleboard.org/Support/BoneScript)
+
+I'll do the real motors work with the web version through bonescript. I think it's a great tool to keep me using simple html5 and some node libraries.
+
 ## Images & Videos
 
 Take a look at [my instagram](http://instagram.com/jonatasdp "See some of my mandalas there!")
 
 http://youtu.be/uCbjx_8tQNw
 
+## Hardware
+
+I'm working with a [beaglebone black](http://beagleboard.org/) to do real motors rotate the real mandalas. These part of project is early starting and I want to connect the acceleration from the website to an external motor that will rotate the real mandalas.
