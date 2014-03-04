@@ -5,14 +5,14 @@ $(document).ready ->
     $("#turn_on_motor").prop("checked",true)
     rpm = parseInt(60 * ( 1.0 / parseFloat( $('#accelerator').val() )))
     $('#velocimeter').text  "#{rpm} rpm"
+    actualAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
     for image in mandalas
       image.style.webkitAnimationPlayState = "paused"
-    actualAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
     changeRotation = ->
       for image in mandalas
         image.style.webkitAnimation = actualAnimation
         image.style.webkitAnimationPlayState = "running"
-    setTimeout(changeRotation,500)
+    setTimeout(changeRotation,300)
 
   $("#turn_on_motor").on "change",  ->
     if @checked
@@ -50,6 +50,14 @@ $(document).ready ->
 
   window.animatingMandalas = setInterval(animateOneMoreMandala,8000)
 
-       
+  $(".skip_animation").on "click", ->
+    clearInterval animatingMandalas
+    delete animatingMandalas
+    for mandala in mandalas
+      mandala.style.webkitAnimationPlayState = "paused"
+      mandala.webkitAnimation = "rotation #{$("#accelerator").val()}s infinite linear"
+      mandala.style.webkitAnimationPlayState = "running"
+      $(mandala).show()
+    $(".skip_animation").hide()
   startAnimation()
 

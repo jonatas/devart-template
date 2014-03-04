@@ -9,11 +9,11 @@
       $("#turn_on_motor").prop("checked", true);
       rpm = parseInt(60 * (1.0 / parseFloat($('#accelerator').val())));
       $('#velocimeter').text("" + rpm + " rpm");
+      actualAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
       for (_i = 0, _len = mandalas.length; _i < _len; _i++) {
         image = mandalas[_i];
         image.style.webkitAnimationPlayState = "paused";
       }
-      actualAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
       changeRotation = function() {
         var _j, _len1, _results;
         _results = [];
@@ -24,7 +24,7 @@
         }
         return _results;
       };
-      return setTimeout(changeRotation, 500);
+      return setTimeout(changeRotation, 300);
     });
     $("#turn_on_motor").on("change", function() {
       var image, state, _i, _len, _results;
@@ -68,6 +68,19 @@
       }
     };
     window.animatingMandalas = setInterval(animateOneMoreMandala, 8000);
+    $(".skip_animation").on("click", function() {
+      var _i, _len;
+      clearInterval(animatingMandalas);
+      delete animatingMandalas;
+      for (_i = 0, _len = mandalas.length; _i < _len; _i++) {
+        mandala = mandalas[_i];
+        mandala.style.webkitAnimationPlayState = "paused";
+        mandala.webkitAnimation = "rotation " + ($("#accelerator").val()) + "s infinite linear";
+        mandala.style.webkitAnimationPlayState = "running";
+        $(mandala).show();
+      }
+      return $(".skip_animation").hide();
+    });
     return startAnimation();
   });
 

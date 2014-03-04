@@ -13,8 +13,6 @@
 .mandala {
   height: 100%;
   -webkit-animation: scale 8s infinite linear, rotation 1s infinite linear; 
-  margin-bottom: 50%;
-
 }
 @-webkit-keyframes rotation {
   from { -webkit-transform: rotate(0deg)  ; }
@@ -46,8 +44,6 @@ canvas {
   height: 100%;
 }
 .mandalas-panel{
-  display: block;
-  overflow: visible ;
-  position:fixed;
+  overflow-y: scroll;
   top: 0;
 }
