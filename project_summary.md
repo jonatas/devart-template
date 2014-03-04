@@ -71,6 +71,6 @@ Take a look at [my instagram](http://instagram.com/jonatasdp "See some of my man
 
 http://youtu.be/uCbjx_8tQNw
 
-## Hardware session
+## Hardware
 
-I'm working with a beaglebone black to work with the real motors and do it like the panel on the web.
+I'm working with a beaglebone black to work with the real motors and make the acceleration send commants to an external motor that will rotate the real mandalas from the web.
