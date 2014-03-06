@@ -14,9 +14,9 @@ Yesterday I bought one more servo motor with the PWM module controller.
 
 ## 3d printer
 
-Yesterday I was trying to print some mandalas in 3d and the Kapton tape that protects the heat bed just was obstrused by the extrusor.
+Yesterday I was trying to print some mandalas in 3d and the Kapton tape that protects the heated bed just was obstrused by the extrusor.
 
-I can't continue printing with these obstrusion, so I order other Kapton thermical tape to protect the heat bed.
+I can't continue printing with these obstrusion, so I order other Kapton thermical tape to protect the heated bed.
 
 The RepRap is really sensible and the Z position comes 0.000n milimiters out of the perfection it start tracing the bed. The Z position should be aligned every time the printer is used.
 
