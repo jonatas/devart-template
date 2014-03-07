@@ -8,7 +8,7 @@ Making a big mandala digital panel rotate!
 
 ## Collaborators
 
-- [Eliége Jachini](http://github.com/eliegejachini "Feel free to feedback me at eliegejachini@gmail.com")
+- [Eliége Jachini](http://github.com/eliegejachini "Feel free to feedback me at eliegejachini@gmail.com") scan and crop all the mandalas for me :)
 
 ## Description
 
