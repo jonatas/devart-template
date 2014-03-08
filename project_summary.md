@@ -45,29 +45,17 @@ And a webkit rotation effect:
 }
 ```
 
-Really cool to see the css keyframes working. Soon, I'll adapt it to work with other modern browsers too.
-
 Now, based on these concepts, my idea is allow the user to combine and create a cool panel of mandalas, rotating in different speeds, sizes, positions in the screen.
 
 ## External libraries and tools
 
-I'm really enjoy to use less libraries than I'm using:
+* CSS3 => For animations on the web
+* http://jquery.org => I really enjoy jquery and I use it just a little, but it allows me think and acts fast.
+* http://coffeescript.org => Simple syntax easy to use and read. I make it's part of the poetry of the code.
+* http://gimp.org => I'm not a confident with the images editor, but I'm doing it with GIMP. It's easy and opensource tool. Help me a lot to crop the mandalas and remove the background.
+* Raspberry PI => I'll use the rpi to command the system and put the motors to accelerate via web
 
-### http://jquery.org
-
-I really enjoy jquery and I use it just a little, but it allows me think and acts fast. I use it in the last 3 years :)
-
-### http://coffeescript.org
-
-Simple language easy to use and read. I make it's part of the poetry of the code.
-
-### http://gimp.org
-
-I'm not a confident with the images editor, but I'm doing it with GIMP. It's easy and opensource tool. Help me a lot to crop the mandalas and remove the background.
-
-### [BoneScript](http://beagleboard.org/Support/BoneScript)
-
-I'll do the real motors work with the web version through bonescript. I think it's a great tool to keep me using simple html5 and some node libraries.
+I'll do the real motors work with the web version through raspberry pi. I think it's a great tool to keep me using simple html5 and some node libraries.
 
 ## Images & Videos
 
