@@ -17,7 +17,7 @@ function Pen(canvasID, radius, posX, posY, speed) {
       var colorStep = parseInt(0xFFFFFF / speed);
 
       for (var i = 0; i < speed; i++) {
-        var color = '#' + (i * colorStep).toString(16).slice(-6);
+        var color = 'black'; //'#' + (i * colorStep).toString(16).slice(-6);
         positionAngle = rotate(positionAngle, increment);
         angle = rotate(angle, -increment * 250 / radius);
         pos = { x: 150, y: 72}
