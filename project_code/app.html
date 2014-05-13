@@ -3,8 +3,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="app.css" title="main style" type="css" />
     <script type="text/javascript" charset="utf-8" src="jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="common.js"></script>
-    <script type="text/javascript" charset="utf-8" src="pen.js"></script>
     <script type="text/javascript" charset="utf-8" src="app.js"></script>
     <title>Mandalas' panel</title>
   </head>
@@ -18,14 +16,10 @@
          ga('create', 'UA-47923013-1', 'ideia.me');
          ga('send', 'pageview');
     </script>
-    <span class="background">
-    <canvas id="background_animation"></canvas>
-    </span>
     <div class="tools">
-      <input type="range" id="accelerator" min="0.001" max="2" step=".001" />
-      <div id="velocimeter">60 rpm</div>
-      <input type="checkbox" id="turn_on_motor" checked="checked" />
-      <button class="skip_animation" >>>Skip animation</button>
+       <input type="checkbox" id="turn_on_motor" checked="checked" />
+       <input type="range" id="accelerator" min="0.001" max="2" step=".001" />
+       <span id="velocimeter_wrapper"><span id="velocimeter">60</span> RPM</span>
     </div>
     <div class="mandalas-panel">
       <img src="mandalas/1/01b.png" alt="mandala" class="mandala" >

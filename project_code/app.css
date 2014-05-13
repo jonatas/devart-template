@@ -2,46 +2,35 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 220px;
   z-index: 1;
   margin-bottom: 20px;
 }
+#turn_on_motor{
+  float: left;
+}
 #accelerator {
-  float: right;
-  margin-top: 60px;
+  float: left;
+
+}
+#velocimeter_wrapper {
+  float: left;
+
 }
 .mandala {
   height: 100%;
-  -webkit-animation: scale 8s infinite linear, rotation 1s infinite linear; 
+  -webkit-animation: rotation 1s infinite linear; 
 }
 @-webkit-keyframes rotation {
   from { -webkit-transform: rotate(0deg)  ; }
   to   { -webkit-transform: rotate(359deg); }
 }
-@-webkit-keyframes scale {
-  0%  { -webkit-transform:rotate( 0deg) scale(0.0) ; }
-  10% { -webkit-transform:rotate(720deg) scale(0.5) ;}
-  45% { -webkit-transform:rotate(765deg) scale(1.33) ;}
-  60% { -webkit-transform:rotate(0deg) scale(1.0); }
-  90% { -webkit-transform:rotate(-3530deg) scale(1.0); }
-  100% { -webkit-transform:rotate(0deg) scale(0.0); }
-}
-
 body { text-align: center; }
 #box {
   height: 100px;
   width: 100px;
   background-color: blue;
   margin: 30px auto;
-}
-.background {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-canvas {
-  width: 100%;
-  height: 100%;
 }
 .mandalas-panel{
   overflow-y: scroll;
