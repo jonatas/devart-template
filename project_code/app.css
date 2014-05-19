@@ -18,7 +18,6 @@
 
 }
 .mandala {
-  height: 100%;
   -webkit-animation: rotation 1s infinite linear; 
 }
 @-webkit-keyframes rotation {
