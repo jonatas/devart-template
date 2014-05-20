@@ -5,27 +5,48 @@
     mandalas = $(".mandala");
     $("#accelerator").css("transform", "rotate(180deg)");
     $("#accelerator").on("change", function() {
-      var actualAnimation, changeRotation, image, rpm, _i, _len;
+      var actualAnimation, changeRotation, pauseMandalas, rpm, runAgain, setAnimation, setAnimationState;
       $("#turn_on_motor").prop("checked", true);
       rpm = parseInt(60 * (1.0 / parseFloat($('#accelerator').val())));
       $('#velocimeter').text(rpm.toString());
       actualAnimation = "rotation " + ($('#accelerator').val()) + "s infinite linear";
       console.log(actualAnimation);
-      for (_i = 0, _len = mandalas.length; _i < _len; _i++) {
-        image = mandalas[_i];
-        image.style.webkitAnimationPlayState = "paused";
-      }
-      changeRotation = function() {
-        var _j, _len1, _results;
+      setAnimationState = function(image, state) {
+        return image.style.webkitAnimationPlayState = image.style.mozAnimationPlayState = image.style.oAnimationPlayState = image.style.animationPlayState = state;
+      };
+      setAnimation = function(image, actualAnimation) {
+        return image.style.webkitAnimation = image.style.mozAnimation = image.style.oAnimation = image.style.animation = actualAnimation;
+      };
+      pauseMandalas = function() {
+        var image, _i, _len, _results;
         _results = [];
-        for (_j = 0, _len1 = mandalas.length; _j < _len1; _j++) {
-          image = mandalas[_j];
-          image.style.webkitAnimation = actualAnimation;
-          _results.push(image.style.webkitAnimationPlayState = "running");
+        for (_i = 0, _len = mandalas.length; _i < _len; _i++) {
+          image = mandalas[_i];
+          _results.push(setAnimationState(image, "paused"));
         }
         return _results;
       };
-      return setTimeout(changeRotation, 500);
+      changeRotation = function() {
+        var image, _i, _len, _results;
+        _results = [];
+        for (_i = 0, _len = mandalas.length; _i < _len; _i++) {
+          image = mandalas[_i];
+          _results.push(setAnimation(image, actualAnimation));
+        }
+        return _results;
+      };
+      runAgain = function() {
+        var image, _i, _len, _results;
+        _results = [];
+        for (_i = 0, _len = mandalas.length; _i < _len; _i++) {
+          image = mandalas[_i];
+          _results.push(setAnimationState(image, "running"));
+        }
+        return _results;
+      };
+      setTimeout(pauseMandalas, 1);
+      setTimeout(changeRotation, 100);
+      return setTimeout(runAgain, 200);
     });
     return $("#turn_on_motor").on("change", function() {
       var image, state, _i, _len, _results;

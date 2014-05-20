@@ -7,15 +7,33 @@ $(document).ready ->
     $('#velocimeter').text rpm.toString()
     actualAnimation = "rotation #{ $('#accelerator').val() }s infinite linear"
     console.log(actualAnimation)
+    setAnimationState = (image, state) ->
+      image.style.webkitAnimationPlayState =
+        image.style.mozAnimationPlayState =
+          image.style.oAnimationPlayState =
+            image.style.animationPlayState =  state
 
-    for image in mandalas
-      image.style.webkitAnimationPlayState = "paused"
+    setAnimation = (image, actualAnimation) ->
+      image.style.webkitAnimation =
+        image.style.mozAnimation =
+          image.style.oAnimation =
+            image.style.animation = actualAnimation
+
+    pauseMandalas = ->
+      for image in mandalas
+        setAnimationState(image, "paused")
+
     changeRotation = ->
       for image in mandalas
-        image.style.webkitAnimation = actualAnimation
-        image.style.webkitAnimationPlayState = "running"
+        setAnimation image, actualAnimation
 
-    setTimeout(changeRotation,500)
+    runAgain = ->
+      for image in mandalas
+        setAnimationState(image, "running")
+
+    setTimeout(pauseMandalas,1)
+    setTimeout(changeRotation,100)
+    setTimeout(runAgain,200)
 
   $("#turn_on_motor").on "change",  ->
     if @checked

@@ -19,10 +19,26 @@
 }
 .mandala {
   -webkit-animation: rotation 1s infinite linear; 
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: rotation 1s infinite linear; 
+  -moz-animation-fill-mode: forwards;
+  -o-animation: rotation 1s infinite linear; 
+  -o-animation-fill-mode: forwards;
+  
 }
 @-webkit-keyframes rotation {
-  from { -webkit-transform: rotate(0deg)  ; }
-  to   { -webkit-transform: rotate(359deg); }
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+
+  }
+  to {
+    -webkit-transform: rotate(359deg); 
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+
+  }
 }
 body { text-align: center; }
 #box {
