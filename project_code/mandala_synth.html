@@ -22,6 +22,8 @@
 
 window.onload = function () {
 
+  window.i = 0;
+
   var mandalaImg = document.getElementById("mandala_img"); 
 
   var mandala = document.getElementById('mandala');
@@ -38,24 +40,26 @@ window.onload = function () {
   contextMandala.drawImage(mandalaImg, 0, 0);
   mandalaImg.parentNode.removeChild(mandalaImg);
 
-  a = 1;
-  b = 1;
   context.clearRect(0, 0, 500, 500);
 
   programChange = {
-    "synth_drum": 118,
-    "baritone_sax": 67,
+    "acoustic_grand_piano": 1,
     "acoustic_guitar_nylon": 24,
+    "baritone_sax": 67,
     "brass_section": 61,
     "distortion_guitar": 30,
-    "flute": 73
+    "electric_bass_finger": 34,
+    "electric_guitar_jazz":  27,
+    "flute": 73,
+    "synth_drum": 118
+    
   }
   instruments = []
   for (var v in programChange) {
     if (programChange.hasOwnProperty(v))
       instruments.push(v);
   }
-  instrumentName = "acoustic_guitar_nylon"; // instruments[2] ;
+  instrumentName = "acoustic_grand_piano"; // instruments[2] ;
   
   MIDI.loadPlugin({ soundfontUrl: "./soundfont/", instruments: instruments,
 		callback: function() {
@@ -71,12 +75,14 @@ window.onload = function () {
            ++count;
         }
       }
-      var i = 0;
+      var _a = 1;
+      var _b = 1;
+      note = 60;
       setInterval(function(){
         i+= 1;
         angle = 0.2 * i;
-        x = centerx + (a + b * angle) * Math.cos(angle);
-        y = centery + (a + b * angle) * Math.sin(angle);
+        x = centerx + (_a + _b * angle) * Math.cos(angle);
+        y = centery + (_a + _b * angle) * Math.sin(angle);
 
         context.lineTo(x, y);
 
@@ -88,12 +94,12 @@ window.onload = function () {
         context.strokeStyle = "rgba("+r+","+g+","+b+",1)";
         context.stroke();
 
-        //note = parseInt(255-parseInt(data[0])); //+255-parseInt(data[1])+255-parseInt(data[2]));
+        //note = parseInt(255-parseInt(data[0])+255-parseInt(data[1])+255-parseInt(data[2]));
         //note = parseInt(parseInt(data[0])+parseInt(data[1])+parseInt(data[2]));
-        note = (r+g+b) % 60;
+        //note = (r+g+b) % count;
+        console.log(note);
         MIDI.noteOn(0, note, velocity, delay);
-        MIDI.noteOff(0, note, delay + 0.75);
-        note += 50-(note/note-1);
+        note += (note/note-1);
 
         context.beginPath();
         context.moveTo(x, y);
