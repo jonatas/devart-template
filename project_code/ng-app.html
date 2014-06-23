@@ -2,8 +2,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="app.css" title="main style" type="css" />
-    <script type="text/javascript" charset="utf-8" src="jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="angular.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/angular.js"></script>
     <script type="text/javascript" charset="utf-8" src="ng-app.js"></script>
     <title>Mandalas' panel</title>
   </head>
@@ -20,7 +19,7 @@
     <div class="tools">
       <input type="checkbox" ng-model="turn_on_motor" ng-change="switch_on_off()"/>
        <input type="range" ng-model="accelerator" min="0.001" max="2" step=".001" ng-change="accelerate()" />
-       <span id="velocimeter_wrapper"><span>{{velocimeter()}}</span> RPM</span>
+       {{velocimeter()}} RPM
     </div>
     <div class="mandalas-panel">
       <img ng-repeat="mandala in mandalas" ng-src="{{mandala}}" class="mandala" />

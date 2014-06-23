@@ -34,8 +34,7 @@ window.main = ($scope) ->
   $scope.img_mandalas = ->
     document.querySelector("img[src='#{mandala}']") for mandala in $scope.mandalas
 
-  $scope.velocimeter = ->
-    $scope.rpm()
+  $scope.velocimeter = $scope.rpm
   $scope.accelerate = ->
     actualAnimation = "rotation #{ $scope.accelerator }s infinite linear"
     $scope.turn_on_motor = true
@@ -50,4 +49,3 @@ window.main = ($scope) ->
 
     for image in $scope.img_mandalas()
       $scope.setAnimationState(image, state)
-

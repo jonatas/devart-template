@@ -53,9 +53,7 @@
       }
       return _results;
     };
-    $scope.velocimeter = function() {
-      return $scope.rpm();
-    };
+    $scope.velocimeter = $scope.rpm;
     $scope.accelerate = function() {
       var actualAnimation, mandala, _k, _len2, _ref2, _results;
       actualAnimation = "rotation " + $scope.accelerator + "s infinite linear";
